@@ -1,0 +1,33 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+$colorbg: #D0011B;
+$colorflex: #D8D8D8;
+body, html {width: 100%;height: 100%;}
+.hero-title {
+  background: $colorbg;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 3em;
+  color: white;
+a{
+  &:hover {
+    color: white;
+  }
+
+  }
+}
+.content {
+  display: flex;
+  justify-content:center;
+  h1 {display: block;}
+  .items {
+    background: $colorflex;
+    width: 200px;
+    height: 200px;
+  }
+}
