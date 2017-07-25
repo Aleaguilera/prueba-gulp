@@ -2,18 +2,33 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import '_config';
+@import '_reset';
 
-@import "compass/reset";
-$colorbg: #D0011B;
-$colorflex: #D8D8D8;
+
+$blood: #8B271F;
+$black: #101010;
 body, html {width: 100%;height: 100%;}
+button {
+  border-radius: 15px;
+}
 .hero-title {
-  background: $colorbg;
+  background: $black;
   width: 100%;
   height: 100%;
   text-align: center;
   font-size: 3em;
   color: white;
+    h1 {color:$blood;
+        font-size: 150px;
+        font-family: 'League Gothic';
+        font-style: normal;
+      }
+      h2 {color:$blood;
+          font-size: 69px;
+          font-family: 'League Gothic';
+          font-style: normal;
+        }
 a{
   &:hover {
     color: white;
@@ -21,13 +36,12 @@ a{
 
   }
 }
-.content {
+.flex-container {
   display: flex;
   justify-content:center;
-  h1 {display: block;}
+
   .items {
-    background: $colorflex;
     width: 200px;
-    height: 200px;
+
   }
 }
