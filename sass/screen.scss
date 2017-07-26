@@ -1,7 +1,7 @@
 /* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+* In this file you should write your main styles. (or centralize your imports)
+* Import this file using the following HTML or equivalent:
+* <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import '_config';
 @import '_reset';
 
@@ -19,29 +19,88 @@ button {
   text-align: center;
   font-size: 3em;
   color: white;
-    h1 {color:$blood;
-        font-size: 150px;
-        font-family: 'League Gothic';
-        font-style: normal;
-      }
-      h2 {color:$blood;
-          font-size: 69px;
-          font-family: 'League Gothic';
-          font-style: normal;
-        }
-a{
-  &:hover {
-    color: white;
+  overflow: hidden;
+  h1 {color:$blood;
+    font-size: 160px;
+    font-family: 'League Gothic';
+    font-style: normal;
+    margin-top: 150px;
+  }
+  h2 {color:$blood;
+    font-size: 69px;
+    font-family: 'League Gothic';
+    font-style: normal;
   }
 
-  }
 }
-.flex-container {
-  display: flex;
-  justify-content:center;
-
-  .items {
-    width: 200px;
-
+.con-tooltip {
+  position: relative;
+  background: #F2D1C9;
+  border-radius: 9px;
+  padding: 0 20px;
+  margin: 10px;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  cursor: default;
+}
+/*tooltip */
+.tooltip {
+  visibility: hidden;
+  z-index: 1;
+  opacity: .40;
+  width: 100%;
+  padding: 0px 20px;
+  background: #333;
+  color: #E086D3;
+  position: absolute;
+  top:-140%;
+  left: -25%;
+  border-radius: 9px;
+  font: 16px;
+  transform: translateY(9px);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 3px rgba(56, 54, 54, 0.86);
+}
+/* tooltip  after*/
+.tooltip::after {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 12.5px 0 12.5px;
+  border-color: #333 transparent transparent transparent;
+  position: absolute;
+  left: 40%;
+}
+.con-tooltip:hover .tooltip{
+  visibility: visible;
+  transform: translateY(-10px);
+  opacity: 1;
+  transition: .3s linear;
+  animation: odsoky 1s ease-in-out infinite      alternate;
+}
+@keyframes odsoky {
+  0%{
+    transform: translateY(6px);
   }
+
+  100%{
+    transform: translateY(1px);
+  }
+
+}
+/*left*/
+.left .tooltip{ top:-20%; left:-170%; }
+
+.left .tooltip::after{
+  top:40%;
+  left:90%;
+  transform: rotate(-90deg);
+}
+/*bottom*/
+.bottom .tooltip { top:115%; left:-20%; }
+.bottom .tooltip::after{
+  top:-17%;
+  left:40%;
+  transform: rotate(180deg);
 }
