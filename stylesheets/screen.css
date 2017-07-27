@@ -2,21 +2,13 @@
 * In this file you should write your main styles. (or centralize your imports)
 * Import this file using the following HTML or equivalent:
 * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,500,600,700");
 body, html {
   font-size: 1em;
-  font-family: 'League Gothic',"Helvetica Neue","Helvetica","Arial";
   width: 100%;
   height: 100%; }
 
 /* Regular */
-/* Regular */
-@font-face {
-  font-family: 'League Gothic';
-  src: url("fonts/leaguegothic-regular-webfont.eot");
-  src: url("fonts/leaguegothic-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/leaguegothic-regular-webfont.woff") format("woff"), url("fonts/leaguegothic-regular-webfont.ttf") format("truetype"), url("fonts/leaguegothic-regular-webfont.svg#league_gothicregular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -79,53 +71,72 @@ button {
 
 .hero-title {
   background: #101010;
-  width: 100%;
   height: 100%;
   text-align: center;
   font-size: 3em;
   color: white;
+  margin: auto;
   overflow: hidden; }
   .hero-title h1 {
     color: #8B271F;
-    font-size: 160px;
-    font-family: 'League Gothic';
+    font-size: 130px;
+    font-family: 'Oswald', sans-serif;
     font-style: normal;
-    margin-top: 150px; }
+    font-weight: bold; }
   .hero-title h2 {
     color: #8B271F;
-    font-size: 69px;
-    font-family: 'League Gothic';
-    font-style: normal; }
+    font-size: 36px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 3px; }
+
+.content {
+  width: 791px;
+  margin: 0 auto;
+  margin-top: 150px; }
+
+.content-subtitle {
+  width: 312px;
+  float: right; }
+
+.con {
+  margin-top: 70px; }
 
 .con-tooltip {
   position: relative;
-  background: #F2D1C9;
   border-radius: 9px;
-  padding: 0 20px;
   margin: 10px;
   display: inline-block;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  cursor: default; }
+  cursor: default;
+  color: #8B271F;
+  padding: 0px 12px;
+  font-family: 'Oswald', sans-serif;
+  cursor: pointer;
+  font-weight: bold; }
 
 /*tooltip */
 .tooltip {
+  font-family: 'Oswald', sans-serif;
   position: absolute;
-  top: 140%;
+  top: 145%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   visibility: hidden;
   z-index: 1;
   opacity: .40;
-  padding: 0px 20px;
-  background: #333;
-  color: #E086D3;
-  border-radius: 9px;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 5px;
   white-space: nowrap;
-  font: 16px;
   -webkit-box-shadow: 0 0 3px rgba(56, 54, 54, 0.86);
           box-shadow: 0 0 3px rgba(56, 54, 54, 0.86); }
+  .tooltip p {
+    color: #8B271F;
+    font-size: 24px; }
 
 /* tooltip  after*/
 .tooltip::after {
@@ -134,7 +145,7 @@ button {
   height: 0;
   border-style: solid;
   border-width: 12px 12.5px 0 12.5px;
-  border-color: #333 transparent transparent transparent;
+  border-color: white transparent transparent transparent;
   position: absolute;
   left: 40%; }
 
@@ -146,7 +157,7 @@ button {
 
 /*bottom*/
 .bottom .tooltip::after {
-  top: -17%;
-  left: 45%;
+  top: -30%;
+  left: 40%;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg); }
