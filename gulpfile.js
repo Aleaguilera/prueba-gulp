@@ -25,6 +25,4 @@ gulp.task('optimizar', () =>
         .pipe(gulp.dest('images'))
 );
 
-
-
 gulp.task('default', ['sass', 'watch']);

@@ -1,14 +1,9 @@
-/* Welcome to Compass.
-* In this file you should write your main styles. (or centralize your imports)
-* Import this file using the following HTML or equivalent:
-* <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,500,600,700");
 body, html {
   font-size: 1em;
   width: 100%;
   height: 100%; }
 
-/* Regular */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -79,29 +74,24 @@ button {
   overflow: hidden; }
   .hero-title h1 {
     color: #8B271F;
-    font-size: 130px;
+    font-size: 120px;
     font-family: 'Oswald', sans-serif;
     font-style: normal;
     font-weight: bold; }
   .hero-title h2 {
     color: #8B271F;
-    font-size: 36px;
+    font-size: 56px;
     font-family: 'Oswald', sans-serif;
-    font-weight: bold;
-    text-align: right;
-    margin-right: 3px; }
+    font-weight: 500;
+    text-align: center;
+    margin-top: 25px; }
 
 .content {
-  width: 791px;
   margin: 0 auto;
   margin-top: 150px; }
 
-.content-subtitle {
-  width: 312px;
-  float: right; }
-
 .con {
-  margin-top: 70px; }
+  margin-top: 40px; }
 
 .con-tooltip {
   position: relative;
@@ -157,7 +147,7 @@ button {
 
 /*bottom*/
 .bottom .tooltip::after {
-  top: -30%;
+  top: -25%;
   left: 40%;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg); }

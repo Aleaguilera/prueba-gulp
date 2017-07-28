@@ -1,10 +1,6 @@
-/* Welcome to Compass.
-* In this file you should write your main styles. (or centralize your imports)
-* Import this file using the following HTML or equivalent:
-* <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
 @import '_config';
 @import '_reset';
-
 
 $blood: #8B271F;
 $black: #101010;
@@ -21,33 +17,26 @@ button {
   margin: auto;
   overflow: hidden;
   h1 {color:$blood;
-    font-size: 130px;
-    // font-family: 'League Gothic';
+    font-size: 120px;
     font-family: 'Oswald', sans-serif;
     font-style: normal;
     font-weight: bold;
   }
   h2 {color:$blood;
-    font-size: 36px;
-    // font-family: 'League Gothic';
+    font-size: 56px;
     font-family: 'Oswald', sans-serif;
-    font-weight: bold;
-    text-align: right;
-    margin-right: 3px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 25px;
   }
-
 }
 .content {
-  width:791px;
   margin: 0 auto;
   margin-top: 150px;
 }
-.content-subtitle {
-  width: 312px;
-  float: right;
-}
+
 .con {
-  margin-top: 70px;
+  margin-top: 40px;
 }
 .con-tooltip {
   position: relative;
@@ -58,7 +47,6 @@ button {
   cursor: default;
   color: $blood;
   padding: 0px 12px;
-  // font-family: 'League Gothic';
   font-family: 'Oswald', sans-serif;
   cursor: pointer;
   font-weight: bold;
@@ -103,7 +91,7 @@ button {
 
 /*bottom*/
 .bottom .tooltip::after{
-  top:-30%;
+  top:-25%;
   left:40%;
   transform: rotate(180deg);
 }
